@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import SplashScreen from "./src/components/splash-screen";
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -20,18 +21,25 @@ const instructions = Platform.select({
 });
 
 export default class App extends Component<{}> {
+
+  data: any;
+
+  constructor(){
+    super();
+    this.state = {
+        screenName: 'MASHA'
+    }
+  }
+
+  componentWillMount(){
+    // TODO: All initial data functions goes here
+    // all data from the API/ajax/DB...
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+        <SplashScreen grisha={this.state.screenName} />
       </View>
     );
   }
