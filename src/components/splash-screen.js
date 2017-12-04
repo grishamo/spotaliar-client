@@ -6,9 +6,8 @@
 
 import React, { Component } from 'react';
 import {
-    Platform,
     StyleSheet,
-    Text,
+    Image,
     View
 } from 'react-native';
 
@@ -18,9 +17,7 @@ export default class SplashScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.welcome}>
-                   SPOT A LIAR : {this.props.grisha}
-                </Text>
+                <Image source={require("../images/splashLogo.png")} />
             </View>
         );
     }
@@ -38,8 +35,10 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         margin: 10,
     },
-    instructions: {
-        textAlign: 'center',
+    imageContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
         color: '#333333',
         marginBottom: 5,
     },
