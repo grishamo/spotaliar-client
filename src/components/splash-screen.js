@@ -17,7 +17,7 @@ export default class SplashScreen extends Component {
     render() {
         const { navigate } = this.props.navigation;
 
-        setTimeout( () => navigate('Home'), 2000 );
+        setTimeout( () => navigate('RecordScreen'), 2000 );
 
         return (
             <View style={styles.container}>
