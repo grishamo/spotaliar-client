@@ -15,9 +15,15 @@ import {
 export default class SplashScreen extends Component {
 
     render() {
+        const { navigate } = this.props.navigation;
+
+        setTimeout( () => navigate('Home'), 2000 );
+
         return (
             <View style={styles.container}>
-                <Image source={require("../images/splashLogo.png")} />
+                <View style={styles.imageContainer}>
+                    <Image source={require("../images/splashLogo.png")} />
+                </View>
             </View>
         );
     }
@@ -26,20 +32,12 @@ export default class SplashScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
+        backgroundColor: '#eaeaea',
     },
     imageContainer: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        color: '#333333',
         marginBottom: 5,
     },
 });
