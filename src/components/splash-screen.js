@@ -17,7 +17,8 @@ export default class SplashScreen extends Component {
     render() {
         const { navigate } = this.props.navigation;
 
-        setTimeout( () => navigate('RecordScreen'), 2000 );
+        //TODO: change splash screen after all application data is ready ()
+        setTimeout( () => navigate('HomeSection'), 2000 );
 
         return (
             <View style={styles.container}>
