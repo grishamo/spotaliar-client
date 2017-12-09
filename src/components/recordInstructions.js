@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 
 export default class recordInstructions extends Component {
@@ -7,7 +7,10 @@ export default class recordInstructions extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Record Instructions</Text>
+                <View><Text>Record Instructions</Text></View>
+                <View style={styles.cameraContainer}>
+                    <Text>Video Container</Text>
+                </View>
             </View>
         );
     }
@@ -19,5 +22,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#eaeaea'
+    },
+    cameraContainer: {
+        background: '#000000',
+        height: 50
     }
 });

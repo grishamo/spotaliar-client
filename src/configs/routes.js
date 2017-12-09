@@ -22,7 +22,10 @@ import Record from '../components/recordScreen';
  */
 const RecordSectionNavigation = StackNavigator({
     RecordHome: {
-        screen: RecordHome
+        screen: RecordHome,
+        navigationOptions: {
+            header: null
+        }
     },
     RecordInstructions: { screen: RecordInstructions },
     RecordScreen: { screen: Record }
