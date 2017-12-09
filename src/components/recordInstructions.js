@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#eaeaea'
     },
     cameraContainer: {
-        background: '#000000',
+        backgroundColor: '#000000',
         height: 50
     }
 });
